@@ -1,0 +1,173 @@
+1  git init ssmdesktop
+    2  cd ssmdesktop
+    3  git status
+    4  git status
+    5  git add .
+    6  git status
+    7  git commit -m " book content "
+    8  git rm --cached secondfile.txt
+    9  git status
+   10  git checkout HEAD^ secondfile.txt
+   11  git commit -m " second file terminated "
+   12  git status
+   13  git checkout HEAD^ secondfile.txt
+   14  git sttus
+   15  git status
+   16  git commit -m " second file restored "
+   17  git status
+   18  git remote add origin https://github.com/shorouksmounir/ssmrep.git
+   19  git status
+   20  git remote -v
+   21  git status
+   22  git push origin master
+   23  git pull origin development
+   24  git config --global push.default simple
+   25  git status
+   26  git push origin master
+   27  git pull origin development
+   28  git pull origin master
+   29  Shorouk Sherif@Shorouk MINGW64 ~
+   30  $ git init ssmdesktop
+   31  Initialized empty Git repository in C:/Users/Shorouk Sherif/ssmdesktop/.git/
+   32  Shorouk Sherif@Shorouk MINGW64 ~
+   33  $ cd ssmdesktop
+   34  Shorouk Sherif@Shorouk MINGW64 ~/ssmdesktop (master)
+   35  $ git status
+   36  On branch master
+   37  No commits yet
+   38  nothing to commit (create/copy files and use "git add" to track)
+   39  Shorouk Sherif@Shorouk MINGW64 ~/ssmdesktop (master)
+   40  $ git status
+   41  On branch master
+   42  No commits yet
+   43  Untracked files:
+   44    (use "git add <file>..." to include in what will be committed)
+   45          firstfile.txt
+   46          secondfile.txt
+   47          thirdfile.txt
+   48  nothing added to commit but untracked files present (use "git add" to track)
+   49  Shorouk Sherif@Shorouk MINGW64 ~/ssmdesktop (master)
+   50  $ git add .
+   51  Shorouk Sherif@Shorouk MINGW64 ~/ssmdesktop (master)
+   52  $ git status
+   53  On branch master
+   54  No commits yet
+   55  Changes to be committed:
+   56    (use "git rm --cached <file>..." to unstage)
+   57          new file:   firstfile.txt
+   58          new file:   secondfile.txt
+   59          new file:   thirdfile.txt
+   60  Shorouk Sherif@Shorouk MINGW64 ~/ssmdesktop (master)
+   61  $ git commit -m " book content "
+   62  [master (root-commit) 8e7873a]  book content
+   63   3 files changed, 187 insertions(+)
+   64   create mode 100644 firstfile.txt
+   65   create mode 100644 secondfile.txt
+   66   create mode 100644 thirdfile.txt
+   67  Shorouk Sherif@Shorouk MINGW64 ~/ssmdesktop (master)
+   68  $ git rm --cached secondfile.txt
+   69  rm 'secondfile.txt'
+   70  Shorouk Sherif@Shorouk MINGW64 ~/ssmdesktop (master)
+   71  $ git status
+   72  On branch master
+   73  Changes to be committed:
+   74    (use "git reset HEAD <file>..." to unstage)
+   75          deleted:    secondfile.txt
+   76  Untracked files:
+   77    (use "git add <file>..." to include in what will be committed)
+   78          secondfile.txt
+   79  Shorouk Sherif@Shorouk MINGW64 ~/ssmdesktop (master)
+   80  $ git checkout HEAD^ secondfile.txt
+   81  error: pathspec 'HEAD^' did not match any file(s) known to git.
+   82  error: pathspec 'secondfile.txt' did not match any file(s) known to git.
+   83  Shorouk Sherif@Shorouk MINGW64 ~/ssmdesktop (master)
+   84  $ git commit -m " second file terminated "
+   85  [master bafdd6c]  second file terminated
+   86   1 file changed, 100 deletions(-)
+   87   delete mode 100644 secondfile.txt
+   88  Shorouk Sherif@Shorouk MINGW64 ~/ssmdesktop (master)
+   89  $ git status
+   90  On branch master
+   91  Untracked files:
+   92    (use "git add <file>..." to include in what will be committed)
+   93          secondfile.txt
+   94  nothing added to commit but untracked files present (use "git add" to track)
+   95  Shorouk Sherif@Shorouk MINGW64 ~/ssmdesktop (master)
+   96  $ git checkout HEAD^ secondfile.txt
+   97  Shorouk Sherif@Shorouk MINGW64 ~/ssmdesktop (master)
+   98  $ git sttus
+   99  git: 'sttus' is not a git command. See 'git --help'.
+  100  The most similar command is
+  101          status
+  102  Shorouk Sherif@Shorouk MINGW64 ~/ssmdesktop (master)
+  103  $ git status
+  104  On branch master
+  105  Changes to be committed:
+  106    (use "git reset HEAD <file>..." to unstage)
+  107          new file:   secondfile.txt
+  108  Shorouk Sherif@Shorouk MINGW64 ~/ssmdesktop (master)
+  109  $ git commit -m " second file restored "
+  110  [master 7503992]  second file restored
+  111   1 file changed, 100 insertions(+)
+  112   create mode 100644 secondfile.txt
+  113  Shorouk Sherif@Shorouk MINGW64 ~/ssmdesktop (master)
+  114  $ git status
+  115  On branch master
+  116  nothing to commit, working tree clean
+  117  Shorouk Sherif@Shorouk MINGW64 ~/ssmdesktop (master)
+  118  $ git remote add origin https://github.com/shorouksmounir/ssmrep.git
+  119  Shorouk Sherif@Shorouk MINGW64 ~/ssmdesktop (master)
+  120  $ git status
+  121  On branch master
+  122  nothing to commit, working tree clean
+  123  Shorouk Sherif@Shorouk MINGW64 ~/ssmdesktop (master)
+  124  $ git remote -v
+  125  origin  https://github.com/shorouksmounir/ssmrep.git (fetch)
+  126  origin  https://github.com/shorouksmounir/ssmrep.git (push)
+  127  Shorouk Sherif@Shorouk MINGW64 ~/ssmdesktop (master)
+  128  $ git status
+  129  On branch master
+  130  nothing to commit, working tree clean
+  131  Shorouk Sherif@Shorouk MINGW64 ~/ssmdesktop (master)
+  132  $ git push origin master
+  133  To https://github.com/shorouksmounir/ssmrep.git
+  134   ! [rejected]        master -> master (fetch first)
+  135  error: failed to push some refs to 'https://github.com/shorouksmounir/ssmrep.git'
+  136  hint: Updates were rejected because the remote contains work that you do
+  137  hint: not have locally. This is usually caused by another repository pushing
+  138  hint: to the same ref. You may want to first integrate the remote changes
+  139  hint: (e.g., 'git pull ...') before pushing again.
+  140  hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+  141  Shorouk Sherif@Shorouk MINGW64 ~/ssmdesktop (master)
+  142  $ git pull origin development
+  143  fatal: Couldn't find remote ref development
+  144  Shorouk Sherif@Shorouk MINGW64 ~/ssmdesktop (master)
+  145  $ git config --global push.default simple
+  146  Shorouk Sherif@Shorouk MINGW64 ~/ssmdesktop (master)
+  147  $ git status
+  148  On branch master
+  149  nothing to commit, working tree clean
+  150  Shorouk Sherif@Shorouk MINGW64 ~/ssmdesktop (master)
+  151  $ git push origin master
+  152  To https://github.com/shorouksmounir/ssmrep.git
+  153   ! [rejected]        master -> master (fetch first)
+  154  error: failed to push some refs to 'https://github.com/shorouksmounir/ssmrep.git'
+  155  hint: Updates were rejected because the remote contains work that you do
+  156  hint: not have locally. This is usually caused by another repository pushing
+  157  hint: to the same ref. You may want to first integrate the remote changes
+  158  hint: (e.g., 'git pull ...') before pushing again.
+  159  hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+  160  Shorouk Sherif@Shorouk MINGW64 ~/ssmdesktop (master)
+  161  $ git pull origin development]
+  162  fatal: Couldn't find remote ref development
+  163  Shorouk Sherif@Shorouk MINGW64 ~/ssmdesktop (master)
+  164  $
+  165  Shorouk Sherif@Shorouk MINGW64 ~/ssmdesktop (master)
+  166  $ git pull origin master
+  167  $ git init ssmdesktop
+  168  git init ssmdesktop
+  169  cd ssmdesktop
+  170  git status
+  171  git add .
+  172  git status
+  173  history
